@@ -1,0 +1,108 @@
+<ion-header>
+  <ion-grid>
+   <ion-row>
+    <ion-col>
+      <ion-img src="assets/images/MainLogo.png"> </ion-img>
+    </ion-col>
+   </ion-row>
+  </ion-grid>
+  <ion-title>REGISTRO</ion-title>
+</ion-header>
+
+<ion-content>
+<ion-grid>
+
+  <!-- Name Team Input -->
+
+
+    <!-- search bar -->
+    <ion-row>
+      <ion-col>
+  <ion-searchbar animated="true" placeholder="Buscar Integrantes"  (ionChange)="onSearch($event)" ></ion-searchbar>
+     </ion-col>
+</ion-row>
+
+
+<div class="search-result">
+  <!-- Search result -->
+  <ion-row *ngIf="searchResults.length > 0">
+    <ion-col>
+      <ion-card class="Buscador" *ngFor="let user of searchResults">
+        <ion-card-content>
+          <ion-item>
+            <ion-avatar slot="start">
+              <ion-img [src]="getProfileImageUrl(user.profileImage)" ></ion-img>
+            </ion-avatar>
+            <ion-label>
+              {{ user.name }}
+            </ion-label>
+           <ion-button slot="end" (click)="addToBox(user.id)">Add</ion-button>
+          </ion-item>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+  <!-- User not found message -->
+  <ion-row *ngIf="searchQuery && searchResults.length === 0">
+    <ion-col>
+      <ion-label>User doesn't found</ion-label>
+    </ion-col>
+  </ion-row>
+</div>
+  <!-- Label and team members -->
+
+  <label>INTEGRANTES</label>
+
+
+  <ion-row>
+    <ion-col>
+
+      <div class="team">
+
+      <ion-card class="Buscador" *ngFor="let member of teamMembers">
+
+        <ion-card-content>
+          <ion-item>
+            <ion-avatar slot="start">
+              <ion-img [src]="getProfileImageUrl(member.profileImage)"></ion-img>
+            </ion-avatar>
+            <ion-label>
+              {{ member.name }}
+            </ion-label>
+            <ion-button slot="end" color="danger" (click)="removeFromBox(member.id)">Remove</ion-button>
+          </ion-item>
+        </ion-card-content>
+      </ion-card>
+      <div class="continue-button">
+        <ion-button expand="full"  (click)="addToTeam()">Continuar</ion-button>
+      </div>
+    </div>
+    </ion-col>
+  </ion-row>
+
+  <!-- Size button -->
+
+    <!-- Button... -->
+
+
+
+</ion-grid>
+</ion-content>
+<!-- footer -->
+<ion-footer>
+  <ion-grid>
+    <ion-row class="BTools" >
+      <ion-col >
+        <ion-img class="btn" src="assets/images/ConfigV.png"></ion-img>
+      </ion-col>
+      <ion-col>
+        <ion-img class="btn"  routerLink ="/index" src="assets/images/cMainV.png"></ion-img>
+      </ion-col>
+      <ion-col>
+        <ion-img class="btn" routerLink ="/challenge-main" src="assets/images/PowerV.png"></ion-img>
+      </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-footer>
+

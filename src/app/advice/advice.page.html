@@ -1,0 +1,38 @@
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-img class="Imain" src="assets/images/logo.png"></ion-img>
+      <ion-button (click)="sendData()" color="danger"  label ="Progreso">Progreso</ion-button>
+      <ion-button color="danger"  label ="Tutorial">Tutorial</ion-button>
+      <ion-button routerLink ="/challenge" color="danger"  label ="Equipo">Equipo</ion-button>
+      <ion-button routerLink ="/register-team"  color="danger"  label ="Cerrar Sesion">Cerrar Sesión</ion-button>
+    </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+
+  <div>
+
+  </div>
+
+</ion-content>
+
+<!-- footer -->
+<ion-footer>
+  <ion-grid class="Gfooter">
+    <ion-row class="BTools" >
+      <ion-col >
+        <ion-img class="btn" src="assets/images/ConfigV.png"></ion-img>
+      </ion-col>
+      <ion-col>
+        <ion-img class="btn"  routerLink ="/index" src="assets/images/cMainV.png"></ion-img>
+      </ion-col>
+      <ion-col>
+        <ion-img class="btn" routerLink ="/challenge-main" src="assets/images/PowerV.png"></ion-img>
+      </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-footer>

@@ -1,0 +1,31 @@
+
+
+<ion-content  class="login-background">
+  <ion-grid>
+  <div class="logo">
+<ion-img  src="assets/images/logo.png"></ion-img>
+  </div>
+ <div class="login-section ion-padding">
+  <div class = "heading ion-pading">
+    <h1> Bienvenido GoHard </h1>
+    <p>Es el incio de un cambio</p>
+  </div>
+  <div class="login-form ion-padding">
+ <div class="form-input ion-padding">
+
+
+      <app-input ngDefaultControl [(ngModel)] = "nickname" type = "last name"  label="Nickname" >Nickname</app-input>
+
+<br>
+      <app-input ngDefaultControl [(ngModel)] = "password"   type = "PassWord"  label="Contraseña" >Contraseña</app-input>
+
+ </div>
+</div>
+<div class="action-button ion-padding">
+  <ion-button ngDefaultControl name ='loginC'  color="danger" (click) ="loginC()" size = "large" class = "login-button"  >ENTRAR</ion-button>
+  <p>¿Olvidaste tu contraseña?</p>
+  <ion-buttom  class="signup-buttom" size = "large" fill = "outline" routerLink ="/signup">Registrate</ion-buttom>
+</div>
+ </div>
+</ion-grid>
+</ion-content>

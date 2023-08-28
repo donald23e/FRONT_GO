@@ -1,0 +1,88 @@
+<!-- header content -->
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-buttons>
+            <ion-button routerLink="/advice">
+              <ion-icon name="apps"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-col>
+        <ion-col>
+          <ion-img src="assets/images/MainLogo.png"></ion-img>
+        </ion-col>
+        <ion-col class="user-avatar-col">
+          <ion-avatar class="user-avatar">
+            <img
+              alt="User's profile image"
+              [src]="profileImageUrl"
+              class="profile-image"
+            />
+          </ion-avatar>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+<!-- main content -->
+<ion-content class ="index">
+  <!-- notification -->
+  <div class="noti">
+<ion-card class="notification">
+  <ion-card-content>NOTIFICATION</ion-card-content>
+</ion-card>
+</div>
+ <!-- main options -->
+  <div class="slides ion-margin-bottom">
+    <ion-slides [options]="SlidesOptions">
+      <!-- slide 1 -->
+      <ion-slide (click)="SlidesOptions.mainTeam()">
+        <ion-card  class="main" >
+         <ion-card-content >
+          <ion-card-title></ion-card-title>
+          <ion-img src="assets/images/TeamM.png"></ion-img>
+         </ion-card-content>
+
+        </ion-card>
+      </ion-slide>
+  <!-- slide 2 -->
+      <ion-slide (click)="SlidesOptions.challengeClick()" >
+        <ion-card class="main" >
+         <ion-card-content>
+          <ion-card-title></ion-card-title>
+          <ion-img    src="assets/images/PowerM.png" ></ion-img>
+         </ion-card-content>
+        </ion-card>
+      </ion-slide>
+<!-- slide 3 -->
+      <ion-slide   (click)="SlidesOptions.ticketClick()">
+        <ion-card class="main">
+         <ion-card-content>
+          <ion-card-title></ion-card-title>
+          <ion-img src="assets/images/Cupones_2.png"></ion-img>
+         </ion-card-content>
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>
+<!-- footer -->
+<ion-footer>
+<ion-grid>
+  <ion-row class="BTools" >
+    <ion-col >
+      <ion-img class="btn" src="assets/images/ConfigV.png"></ion-img>
+    </ion-col>
+    <ion-col>
+      <ion-img class="btn"  routerLink ="/index" src="assets/images/cMainV.png"></ion-img>
+    </ion-col>
+    <ion-col>
+      <ion-img class="btn" routerLink ="/reto-modulo" src="assets/images/PowerV.png"></ion-img>
+    </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>
+
+

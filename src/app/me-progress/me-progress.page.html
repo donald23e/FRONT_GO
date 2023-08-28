@@ -1,0 +1,62 @@
+<!-- header content -->
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+      <ion-col>
+    <ion-buttons>
+      <ion-button routerLink ="/advice">
+  <ion-icon name="apps"  ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+      </ion-col>
+      <ion-col>
+    <ion-img src="assets/images/MainLogo.png">
+    </ion-img>
+      </ion-col>
+      <ion-col>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-title>MI PROGRESO</ion-title>
+<ion-grid>
+  <ion-avatar>
+    <ion-img [src]="getProfileImageUrl(profileImage)"></ion-img>
+  </ion-avatar>
+
+  <ion-card class="Buscador">
+    <ion-card-content>
+
+
+
+          <ion-label>{{name}}</ion-label>
+
+
+    </ion-card-content>
+  </ion-card>
+
+</ion-grid>
+</ion-content>
+
+
+<!-- footer -->
+<ion-footer>
+<ion-grid>
+  <ion-row class="BTools" >
+    <ion-col >
+      <ion-img class="btn" src="assets/images/ConfigV.png"></ion-img>
+    </ion-col>
+    <ion-col>
+      <ion-img class="btn"  routerLink ="/index" src="assets/images/cMainV.png"></ion-img>
+    </ion-col>
+    <ion-col>
+      <ion-img class="btn" routerLink ="/challenge-main"src="assets/images/PowerV.png"></ion-img>
+    </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>
+

@@ -1,0 +1,79 @@
+ion-content{
+  ion-grid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/*ion-content.background{
+  --ion-background-color: #E5282C ;
+}*/
+.login-background{
+  --ion-background-color: #E5282C ;
+}
+.logo{
+  width: 100px;
+  height: 100px;
+  top: 20px;
+  margin: auto;
+  position: relative;
+
+  ion-img{
+    filter: drop-shadow(-2px 2px 15px rgba(0, 0, 0, 0.7));
+  }
+}
+
+.login-section{
+  height: 74vh;
+  width: 100%;
+  max-width: 500px;
+  background: #ffff;
+  right: 0;
+  left : 0;
+  bottom : 0;
+  position: fixed;
+  margin: auto;
+  border-top-left-radius: 46px;
+  border-top-right-radius: 46px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.heading{
+  margin-left: 40px;
+  margin-top: 20px;
+  h1{
+    font-size: 1.6rem;
+    font-weight: bolder;
+  }
+  p{
+    margin-top: 7px;
+    font-size: 1.2rem;
+    color: #7b7b7b;
+  }
+
+}
+
+.login-form{
+  .form-input{
+    ion-label{
+      margin-bottom: 20px;
+    }
+
+  }
+}
+
+.action-button{
+  ion-button{
+    filter: drop-shadow(-2px 2px 15px rgba(0, 0, 0, 0.4));
+  }
+  .signup-buttom{
+    color: #E5282C;
+  }
+
+}
+
+
+
+
+

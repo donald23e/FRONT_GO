@@ -1,0 +1,52 @@
+<ion-header>
+    <ion-title>UNIRSE</ion-title>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-searchbar animated="true" placeholder="Buscar Integrantes"  (ionChange)="onSearch($event)" ></ion-searchbar>
+           </ion-col>
+    </ion-row>
+  <!-- Search result -->
+  <ion-row *ngIf="searchResults.length > 0">
+    <ion-col>
+      <ion-card class="Buscador" *ngFor="let Team of searchResults">
+        <ion-card-content>
+          <ion-item>
+            <ion-avatar slot="start">
+              <ion-img [src]="getProfileImageUrlTeam(Team.img)" ></ion-img>
+            </ion-avatar>
+            <ion-label>
+              {{ Team.name }}
+            </ion-label>
+           <ion-button slot="end" (click)="addToTeam(Team)">Add</ion-button>
+          </ion-item>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+
+
+  </ion-grid>
+</ion-content>
+
+<!-- footer -->
+<ion-footer>
+  <ion-grid>
+    <ion-row class="BTools" >
+      <ion-col >
+        <ion-img class="btn" src="assets/images/ConfigV.png"></ion-img>
+      </ion-col>
+      <ion-col>
+        <ion-img class="btn"  routerLink ="/index" src="assets/images/cMainV.png"></ion-img>
+      </ion-col>
+      <ion-col>
+        <ion-img class="btn" routerLink ="/challenge-main" src="assets/images/PowerV.png"></ion-img>
+      </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-footer>
+

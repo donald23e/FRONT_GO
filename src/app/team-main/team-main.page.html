@@ -1,0 +1,61 @@
+<!-- header content -->
+<ion-header>
+  <ion-grid>
+   <ion-row>
+    <ion-col>
+
+    </ion-col>
+   </ion-row>
+  </ion-grid>
+  <ion-title>Equipo</ion-title>
+</ion-header>
+<!-- content-->
+<ion-content>
+
+  <ion-card *ngFor="let member of members" class="member-card">
+    <ion-card-content class="card-content">
+      <ion-avatar>
+        <ion-img class="profile-image"  [src]="getProfileImageUrl(member.profileImage)"></ion-img>
+      </ion-avatar>
+      <div class="member-info">
+        <ion-card-title>{{ member.nameUser }}</ion-card-title>
+        <ion-card-subtitle>{{ member.nicknameUser }}</ion-card-subtitle>
+        <p>week Progress</p>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+    <!-- Display "POINT" and "DAYS" cards -->
+    <div class="cards-row">
+      <ion-card class="point-card">
+        <ion-card-content>
+          <ion-card-title  class="white-text">POINT</ion-card-title>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card class="days-card">
+        <ion-card-content>
+          <ion-card-title  class="white-text">DAYS</ion-card-title>
+        </ion-card-content>
+      </ion-card>
+    </div>
+</ion-content>
+
+
+<!-- footer -->
+<ion-footer>
+<ion-grid>
+  <ion-row class="BTools" >
+    <ion-col >
+      <ion-img class="btn"  routerLink ="/setting" src="assets/images/ConfigV.png"></ion-img>
+    </ion-col>
+    <ion-col>
+      <ion-img class="btn"  routerLink ="/index" src="assets/images/cMainV.png"></ion-img>
+    </ion-col>
+    <ion-col>
+      <ion-img class="btn" routerLink ="/challenge-main" src="assets/images/PowerV.png"></ion-img>
+    </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>
+

@@ -1,0 +1,27 @@
+
+ion-grid{
+
+  ion-row{
+     margin-left: 50px;
+    ion-col{
+
+      ion-button{
+        padding-top: 10px;
+        padding-bottom: 10px;
+       width: 300px;
+       height: 100px;
+       padding: auto;
+       filter: drop-shadow(-2px 2px 10px rgba(0, 0, 0, 0.7));
+      }
+      ion-img{
+        margin-left: 80px;
+        margin-top: 50px;
+        margin-bottom: 100px;
+        width: 150px;
+        height: 150px;
+        filter: drop-shadow(-2px 2px 10px rgba(0, 0, 0, 0.7));
+      }
+    }
+  }
+}
+

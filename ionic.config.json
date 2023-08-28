@@ -1,0 +1,7 @@
+{
+  "name": "GOHARD",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

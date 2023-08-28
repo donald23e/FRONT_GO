@@ -1,0 +1,55 @@
+
+
+<ion-content  class="login-background">
+  <ion-grid>
+    <ion-row>
+      <ion-col class="logo">
+        <ion-img  src="assets/images/logo.png"></ion-img>
+         </ion-col >
+      <ion-col class = "heading ion-pading">  <h1>REGISTRO</h1> </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <div class="login-section ion-padding">
+<!-- AVATAR -->
+    <ion-avatar (click)="selectImage()">
+      <img
+        alt="Silhouette of a person's head"
+        src= "https://ionicframework.com/docs/img/demos/avatar.svg"
+        *ngIf="profileImageUrl; else defaultAvatar"
+        [src]="profileImageUrl"
+        class="profile-image"
+      />
+      <ng-template #defaultAvatar>
+        <ion-img src="https://ionicframework.com/docs/img/demos/avatar.svg"class="profile-image"></ion-img>
+      </ng-template>
+    </ion-avatar>
+
+<!-- FORM -->
+   <div class="login-form ion-padding">
+  <div class="form-input">
+
+
+    <input
+    #imageInput
+    type="file"
+    style="display: none;"
+    (change)="cambiarImagen($event)"
+    accept="image/*"
+  />
+      <!--    <input type="file" (change)="cambiarImagen($event)" accept="image/*"> -->
+       <app-input ngDefaultControl [(ngModel)] = "name"   type = "text"  label="Nombre" >Nombre</app-input>
+      <app-input ngDefaultControl [(ngModel)] = "nickname" type = "text"  label="Nickname" >Nickname</app-input>
+      <app-input ngDefaultControl [(ngModel)] = "correo" type = "email"  label="Correo">Correo</app-input>
+      <app-input ngDefaultControl [(ngModel)] = "password"   type = "passWord"  label="Contraseña" >Contraseña</app-input>
+      <app-input ngDefaultControl [(ngModel)] = "confirmPassword"  type = "passWord"  label="Confirmar Contraseña" >Contraseña</app-input>
+
+  </div>
+ </div>
+ <div class="action-button ion-padding">
+   <ion-button ngDefaultControl name ='addUser'  color="danger" (click) ="addUser()" size = "large" class = "login-button"  >Continuar</ion-button>
+
+ </div>
+  </div>
+ </ion-content>
+
