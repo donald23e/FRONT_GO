@@ -1,9 +1,9 @@
-import { Component , OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component , OnInit, ViewChild, ElementRef,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { Router,ActivatedRoute} from '@angular/router';
 import { UserService } from '../services/user.service';
 import jwt_decode from 'jwt-decode';
 import { user } from '../interfaces/user';
-
+// check custom
 
 @Component({
   selector: 'app-index',
